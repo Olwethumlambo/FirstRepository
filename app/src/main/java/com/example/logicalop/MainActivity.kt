@@ -27,6 +27,19 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
+
+       //link the variables to the UI components using their  ID's (typecasting)
+       edtName = findViewById(R.id.edtName)
+        edtAge = findViewById(R.id.edtAge)
+        cbStaff= findViewById(R.id.cbStaff)
+        cbITStudent = findViewById(R.id.cbITStudent)
+        cbBanned = findViewById(R.id.cbBanned)
+        btCheck = findViewById(R.id.btnCheck)
+        tvResult = findViewById(R.id.tvResult)
+
+
+
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
